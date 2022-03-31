@@ -1,0 +1,26 @@
+@import "settings";
+@import "responsive";
+
+#greetings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@include respond(mobile) {
+  #greetings img {
+    width: 100%;
+  }
+}
+
+@include respond(tablet) {
+  #greetings img {
+    width: 100%;
+  }
+}
+
+@include respond(desktop) {
+  #greetings img {
+    width: $logo-width;
+  }
+}

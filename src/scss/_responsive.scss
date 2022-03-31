@@ -1,0 +1,20 @@
+@import "settings";
+@mixin respond ($breakpoint) { // mobile, tablet, desktop
+  @if $breakpoint==mobile {
+    @media only screen and (max-width: $mobile-max-width) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==tablet {
+    @media only screen and (min-width: ($mobile-max-width + 1px)) and (max-width: $tablet-max-width) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==desktop {
+    @media only screen and ($tablet-max-width + 1px) {
+      @content;
+    }
+  }
+}
